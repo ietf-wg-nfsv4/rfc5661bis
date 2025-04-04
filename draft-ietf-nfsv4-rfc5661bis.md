@@ -1,7 +1,7 @@
 ---
 v: 3
 ipr: pre5378Trust200902
-docname: draft-ietf-nfsv4-rfc5661bis-09
+docname: draft-ietf-nfsv4-rfc5661bis-latest
 cat: std
 obsoletes: '8881,8434'
 consensus: 'true'
@@ -21,7 +21,7 @@ title: Network File System (NFS) Version 4 Minor Version 1 Protocol
 abbrev: Draft of rfc5661bis
 area: Transport
 wg: NFSv4
-date: 2024
+date: {date}
 author:
 - role: editor
   ins: D. Noveck
@@ -32484,7 +32484,7 @@ to what the server requests, the server can force the issue
 by asserting flow control on the receive side of
 all connections bound to the fore channel, and then
 finish servicing all outstanding requests that are
-in slots greater than rsa_target_highest_slotid. 
+in slots greater than rsa_target_highest_slotid.
 Once that
 is done, the server can then open the flow control, and any time
 the client sends a new request on a slot greater than
@@ -32889,7 +32889,7 @@ struct CB_ILLEGAL4res {
 This operation is a placeholder for encoding a
 result to handle the case of the server sending
 an operation code within CB_COMPOUND that is not
-defined in the NFSv4.1 specification. 
+defined in the NFSv4.1 specification.
 See {{OP_CB_COMPOUND_DESCRIPTION}} for more details.
 
 The status field of CB_ILLEGAL4res MUST be set to
@@ -33354,11 +33354,11 @@ The registry is a list of assignments, each containing
 five fields per assignment.
 
 
-1. The name of the notification type. 
+1. The name of the notification type.
    This name must have the prefix "NOTIFY_DEVICEID4_".
    This name must be unique.
 
-2. The value of the notification. 
+2. The value of the notification.
    IANA will assign this number, and the request from the registrant
    will use TBD1 instead of an actual value.
    IANA MUST use a whole number that can be no higher than
@@ -33371,11 +33371,11 @@ five fields per assignment.
    description.
 
 3. The Standards Track RFC(s) that describe the
-   notification. 
+   notification.
    If the RFC(s) have not yet been published, the registrant will use
    RFCTBD2, RFCTBD3, etc. instead of an actual RFC number.
 
-4. How the RFC introduces the notification. 
+4. How the RFC introduces the notification.
    This is indicated by a single US-ASCII value.
    If the value is N, it means a minor revision to the NFSv4 protocol.
    If the value is L, it means a new pNFS layout type.
@@ -33707,7 +33707,7 @@ The registry is a list of assignments, each containing three fields.
    permits) of the purpose of the variable.
    A reference to the explanation can be substituted.
 
-3. The point of contact, including an email address. 
+3. The point of contact, including an email address.
    The point of contact can consume up to 256 bytes (or more if IANA
    permits).
    For assignments made on a Standards Action basis, the point of
@@ -35904,7 +35904,7 @@ Given this divergence, it makes sense to determine which
 of these approaches is correct and make explicit
 descriptions of recovery make clear how clients are to deal
 with servers that do maintain state across reboot and
-avoid reclaim just as they do in the event of migration. 
+avoid reclaim just as they do in the event of migration.
 A
 part of that discussion will concern potential compatibility
 issues which are not troublesome if clients do follow the
